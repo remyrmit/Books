@@ -1,6 +1,6 @@
-# Books Web App (Node.js + Express)
+## Books Web App (Node.js + Express)
 
-A simple web application built with **Node.js**, **Express**, **HTML**, **CSS**, and **Vanilla JavaScript**.  
+A simple web application built with Node.js, Express, HTML, CSS, and Vanilla JavaScript.  
 
 ---
 
@@ -12,14 +12,10 @@ A simple web application built with **Node.js**, **Express**, **HTML**, **CSS**,
 
 ## Installation & Running
 
-# Clone the repo
-git clone https://github.com/remyrmit/Books.git
+Clone the repo: `git clone https://github.com/remyrmit/Books.git`
 
-# Navigate into the project
-cd Books
+Navigate into the project: `cd Books`
 
-# Install dependencies
-npm install
+Install dependencies: `npm install`
 
-# Run the app
-node src/index.js
+Run the app: `node src/index.js`
