@@ -19,9 +19,9 @@ app.listen(port, () => {
 
 const getBooks = () => {
     const books = [
-        { id: 1, name: "abc", author: "vvvv" },
-        { id: 2, name: "sd", author: "sd" },
-        { id: 3, name: "dfd", author: "sdfg" },
+        { id: 1, name: "1984", author: "George Orwell"},
+        { id: 2, name: "No Longer Human", author: "Osamu Dazai" },
+        { id: 3, name: "Flowers for Algernon", author: "Daniel Keys" },
       ];
 
   return books;
