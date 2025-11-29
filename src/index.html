@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Index</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script src="script.js"></script> -->
+  </head>
+  <body>
+    <div>
+      <h1 class="table-header">Books</h1>
+      <table id="books-table">
+      </table>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        async function getBooks() {
+          const url = "http://localhost:3000/books";
+          try {
+            const response = await fetch(url);
+            if (!response.ok) {
+              throw new Error(`Response status: ${response.status}`);
+            }
+
+            const result = await response.json();
+            return result;
+          } catch (error) {
+            console.error("An error has occured when trying to get books");
+          }
+        }
+
+        const books = await getBooks();
+        console.log(books);
+        const table = document.getElementById("books-table");
+
+        for (let i = 0; i < books.length; i++) {
+          let row = table.insertRow(i);
+          let cell1 = row.insertCell(0);
+          let cell2 = row.insertCell(1);
+          let cell3 = row.insertCell(2);
+
+          cell1.innerHTML = books[i].id;
+          cell2.innerHTML = books[i].name;
+          cell3.innerHTML = books[i].author;
+        }
+      });
+    </script>
+  </body>
+</html>
